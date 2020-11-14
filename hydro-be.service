@@ -1,0 +1,11 @@
+[Unit]
+Description=LTPS NodeJS Test Application
+After=network-online.target
+
+[Service]
+Restart=on-failure
+WorkingDirectory=/home/pi/hydro_be/hydro-be/bin/
+ExecStart=/usr/bin/node /home/pi/hydro_be/hydro-be/bin/www
+
+[Install]
+WantedBy=multi-user.target
